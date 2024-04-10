@@ -21,7 +21,7 @@ onMounted(() => {
 const init = () => {
   // 透视摄像机
   const camera = new THREE.PerspectiveCamera(45, screenDom.value.clientWidth / screenDom.value.clientHeight, 0.1, 1000)
-  camera.position.set(0, 0, 100);
+  camera.position.set(20, 20, 20);
   camera.lookAt(0, 0, 0);
 
   const renderer = new THREE.WebGLRenderer()
@@ -31,14 +31,18 @@ const init = () => {
     color: 0x00ff00
   })
   const points = [];
-  points.push(new THREE.Vector3(- 10, 0, 0));
-  points.push(new THREE.Vector3(0, 10, 0));
   points.push(new THREE.Vector3(10, 0, 0));
+  points.push(new THREE.Vector3(0, 10, 0));
+  points.push(new THREE.Vector3(0, 0, 10));
 
   const geometry = new THREE.BufferGeometry().setFromPoints(points)
 
   const line = new THREE.Line(geometry, material)
   scene.add(line)
+
+  const axesHelper = new THREE.AxesHelper(5)
+  scene.add(axesHelper)
+
   renderer.render(scene, camera)
 }
 

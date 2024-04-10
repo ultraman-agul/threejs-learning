@@ -80,8 +80,8 @@ const init = () => {
 
   // viewer.renderer.setPixelRatio(window.devicePixelRatio * 2)
 
-  viewer.renderer.shadowMap.enabled = true
-  viewer.renderer.shadowMap.type = THREE.PCFSoftShadowMap
+  viewer.renderer.shadowMap.enabled = true // 开启阴影
+  viewer.renderer.shadowMap.type = THREE.PCFSoftShadowMap // 软阴影效果，使得阴影更加自然和模糊
 
   const lights = new Lights(viewer)
   const ambientLight = lights.addAmbientLight() // 添加环境光

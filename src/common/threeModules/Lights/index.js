@@ -32,7 +32,7 @@ export default class Lights {
    * 添加环境光源
    */
   addAmbientLight() {
-    const ambientLight = new AmbientLight(this.viewer)
+    const ambientLight = new AmbientLight(this.viewer) // 环境光是一种无方向的光源，它会均匀地照亮场景中的所有物体，而不考虑物体的位置和朝向。
     this.lightList.push(ambientLight)
     return ambientLight
   }

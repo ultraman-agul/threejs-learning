@@ -132,6 +132,15 @@ loader.load("/glb/island2.glb", (gltf) => {
   // isLand.position.y = -50;
   scene.add(isLand)
 })
+
+// 动画循环
+// function animate() {
+//     requestAnimationFrame(animate);
+//     waterMat.position.y += 0.1;
+//     renderer.render(scene, camera);
+//   }
+
+//   animate();
 </script>
 <style lang='less' scoped>
 .container {
