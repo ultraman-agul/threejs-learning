@@ -69,6 +69,15 @@ const routes = [
           activePath: "/base/skybox"
 
         }
+      },
+      {
+        path: 'universe',
+        name: "base_universe",
+        component: () => import("@/views/base/universe.vue"),
+        meta: {
+          title: "宇宙",
+          activePath: "/base/universe"
+        }
       }
 
     ]
