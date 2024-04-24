@@ -42,7 +42,7 @@ export default class Lights {
    * @param option
    */
   addPointLight(position = [0, 40, 0], option = { color: 'rgb(255,255,255)' }) {
-    const pointLight = new PointLight(this.viewer, position, option)
+    const pointLight = new PointLight(this.viewer, position, option) // 点光源，它发出均匀的点状光源，其强度随着距离的增加而衰减。
     this.lightList.push(pointLight)
     return pointLight
   }

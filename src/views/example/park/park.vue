@@ -96,6 +96,7 @@ const init = () => {
     intensity: 3,
     castShadow: true // 是否投射阴影
   })
+  // 添加聚光灯
   const spotLights = new THREE.Group()
   spotLights.name = 'SpotLights'
   spotLights.add(initSpotLight(10, 32, -30))
@@ -639,8 +640,8 @@ const loadLaboratoryBuild = () => {
 const loadCar = () => {
   modelLoader.loadModelToScene('/glTF/car13.gltf', (model) => {
     car = model
-    model.openCastShadow()
-    model.openReceiveShadow()
+    model.openCastShadow() // 开启投射阴影
+    model.openReceiveShadow() // 开启接收阴影
     model.object.position.set(11.5, 0, 18)
     model.object.scale.set(1, 1, 1)
     model.object.name = '快递车'
